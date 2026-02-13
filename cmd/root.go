@@ -1,8 +1,6 @@
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
 
@@ -70,22 +68,16 @@ Examples:
 
 	// Add commands
 	rootCmd.AddCommand(
-	// TODO: implement sub-commands :
-	//   - run
-	//   - proxy
-	//   - list
-	//   - replay
-	//   - version
+		// TODO: implement sub-commands :
+		//   - run
+		//   - proxy
+		//   - list
+		//   - replay
+		newVersionCommand(),
 	)
 
 	// Execute
 	return rootCmd.Execute()
-}
-
-// PrintVersion prints version information.
-func PrintVersion() {
-	fmt.Printf("NetCap version %s\n", Version)
-	fmt.Printf("Build time: %s\n", BuildTime)
 }
 
 // GetGlobalFlags returns the global flags.
